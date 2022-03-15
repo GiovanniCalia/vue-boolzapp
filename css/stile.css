@@ -33,7 +33,7 @@ body{
     background-color: rgb(234, 234, 234);
 }
 
-.my-user{
+.user-friend{
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -41,17 +41,17 @@ body{
     border-left: 1px solid lightgrey;
 }
 
-.my-user-name-img{
+.user-friend-name-img{
     display: flex;
     align-items: center;
 }
 
-.my-user-name-img img{
+.user-friend-name-img img{
     width: 2.5rem;
     border-radius: 50%;
 }
 
-.my-user-name-img div{
+.user-friend-name-img div{
     margin-left: 10px;
 }
 
@@ -177,15 +177,40 @@ body{
     position: relative;
 }
 
+.texts{
+    height: calc(100% - 3.5rem - 57.59px);
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-around;
+}
+
+.friend-text{
+    width: 30%;
+    height: 100%;
+    background-color: red;
+    text-align: center;
+}
+
+.my-text{
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+    text-align: center;
+}
+
+.single-text{
+    background-color: white;
+    padding: 0.5rem;
+}
+
+
+
+
 .message-text{
     height: 3.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 0 1.5rem;
     border-left: 1px solid lightgrey;
     background-color: rgb(234, 234, 234);

@@ -33,9 +33,11 @@ body{
 }
 
 .my-user{
-    margin: 0.5rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(234, 234, 234);
+    border-left: 1px solid lightgrey;
 }
 
 .my-user-name-img{
@@ -57,7 +59,7 @@ body{
 }
 
 .settings-first-box i{
-    margin: 1rem 0.5rem;
+    margin: 0.8rem 0.5rem;
     color: darkgrey;
 }
 
@@ -70,7 +72,7 @@ body{
     background-color: rgb(142, 218, 251);
     display: flex;
     align-items: center;
-    padding: 0.8rem;
+    padding: 0.6rem;
 }
 
 .notification i{
@@ -125,6 +127,7 @@ body{
 }
 
 .users-list{
+    max-height: 500px;
     overflow-y: scroll;
 }
 
@@ -144,6 +147,7 @@ body{
 .user img{
     width: 3rem;
     border-radius: 50%;
+    margin-right: 0.5rem;
 }
 
 .user-text-left{

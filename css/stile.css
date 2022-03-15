@@ -44,7 +44,7 @@ body{
 }
 
 .my-user-name-img img{
-    width: 3rem;
+    width: 2.5rem;
     border-radius: 50%;
 }
 
@@ -131,16 +131,18 @@ body{
 .user{
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem;
     padding-bottom: 8px;
     border-top: 1px solid lightgrey;
 }
 
 .user:hover{
     background-color: lightgray;
+    cursor: pointer;
 }
 
 .user img{
-    width: 3.5rem;
+    width: 3rem;
     border-radius: 50%;
 }
 

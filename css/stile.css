@@ -31,7 +31,7 @@ body{
 .first-box{
     width: 35%;
     height: 100%;
-    background-color: lightgray;
+    background-color: rgb(234, 234, 234);
 }
 
 .user{
@@ -60,12 +60,69 @@ body{
 
 .settings-first-box i{
     margin: 1rem 0.5rem;
-    color: grey;
-    cursor: pointer;
+    color: darkgrey;
 }
 
 .settings-first-box i:hover{
     color: rgb(75, 75, 75);
+    cursor: pointer;
+}
+
+.notification{
+    background-color: rgb(142, 218, 251);
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+.notification i{
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(142, 218, 251);
+}
+
+.notification div{
+    font-size: 90%;
+}
+
+.text-notification div:last-child{
+    color: grey;
+    text-decoration: underline;
+}
+
+.text-notification div:last-child:hover{
+    cursor: pointer;
+}
+
+.text-notification{
+    margin-left: 10px;
+}
+
+.search-place{
+    display: flex;
+    margin: 6px;
+}
+
+.search-place i{
+    width: 3rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.search-place input{
+    flex-grow: 1;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-left: none;
+    padding: 0.4rem;
 }
 
 .second-box{

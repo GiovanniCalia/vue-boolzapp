@@ -20,10 +20,56 @@ body{
 #container{
     width: 1000px;
     height: 600px;
+    display: flex;
     background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+.first-box{
+    width: 35%;
+    height: 100%;
+    background-color: lightgray;
+}
+
+.user{
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-name-img{
+    display: flex;
+    align-items: center;
+}
+
+.user-name-img img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.user-name-img div{
+    margin-left: 10px;
+}
+
+.settings-first-box{
+    display: flex;
+}
+
+.settings-first-box i{
+    margin: 1rem 0.5rem;
+    color: grey;
+    cursor: pointer;
+}
+
+.settings-first-box i:hover{
+    color: rgb(75, 75, 75);
+}
+
+.second-box{
+    width: 65%;
+    height: 100%;
+    background-color: red;
 }

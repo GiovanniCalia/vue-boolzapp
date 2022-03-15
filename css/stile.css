@@ -19,7 +19,7 @@ body{
 
 #container{
     width: 1000px;
-    height: 600px;
+    height: 670px;
     display: flex;
     background-color: white;
     position: absolute;
@@ -34,23 +34,23 @@ body{
     background-color: rgb(234, 234, 234);
 }
 
-.user{
+.my-user{
     margin: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
 
-.user-name-img{
+.my-user-name-img{
     display: flex;
     align-items: center;
 }
 
-.user-name-img img{
+.my-user-name-img img{
     width: 3rem;
     border-radius: 50%;
 }
 
-.user-name-img div{
+.my-user-name-img div{
     margin-left: 10px;
 }
 
@@ -94,10 +94,6 @@ body{
     text-decoration: underline;
 }
 
-.text-notification div:last-child:hover{
-    cursor: pointer;
-}
-
 .text-notification{
     margin-left: 10px;
 }
@@ -114,6 +110,11 @@ body{
     text-align: center;
     border: 1px solid lightgray;
     background-color: white;
+    color: grey;
+}
+
+.search-place i:hover, .text-notification div:last-child:hover{
+    cursor: pointer;
 }
 
 .search-place input{
@@ -129,4 +130,34 @@ body{
     width: 65%;
     height: 100%;
     background-color: red;
+}
+
+.user{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.user img{
+    width: 3.5rem;
+    border-radius: 50%;
+}
+
+.user-text-left{
+    display: flex;
+}
+
+.text-users div:first-child{
+    font-size: 90%;
+}
+
+.text-users div:last-child{
+    font-size: 80%;
+    color: gray;
+}
+
+.time{
+    margin-right: 10px;
+    color: grey;
+    font-size: 80%;
 }

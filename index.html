@@ -41,20 +41,20 @@
                 </div>
                 <div class="search-place">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="users-list">
                     <div class="user" v-for="element in contacts">
                         <div class="user-text-left">
-                            <img src="img/avatar_1.jpg" alt="avatar 1">
+                            <img :src="element.image" :alt="element.altImage">
                             <div class="text-users">
                                 <div>{{ element.name }}</div>
-                                <div>Ultimo messaggio inviato</div>
+                                <div>{{ element.lastMessage }}</div>
                             </div>
                         </div>
                         <div class="time">12:00</div>
                     </div>
-                    <div class="user">
+                    <!--<div class="user">
                         <div class="user-text-left">
                             <img src="img/avatar_2.jpg" alt="avatar 1">
                             <div class="text-users">
@@ -123,7 +123,7 @@
                             </div>
                         </div>
                         <div class="time">12:00</div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="second-box">

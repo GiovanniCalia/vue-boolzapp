@@ -1,12 +1,17 @@
 const app = new Vue({
     el: "#root",
     data: {
-        newMessage: "",
+        newMessage: [
+            {
+                message: "",
+                hour: "",
+            }
+        ],
         contacts: [
             {
                 name: "Michele",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: "12:00",
+                hour: "DateTime.fromISO('2017-W33-4')",
                 image: "img/avatar_1.jpg",
                 altImage: "avatar 1",
             },
@@ -70,18 +75,26 @@ const app = new Vue({
                 hour: "15:50",
             },
         ],
+        textMessage: [
+            {
+                message: "",
+                hour: "",
+            }
+
+        ],
         messageFriend: [
             {
-                message: "Tutto fatto!",
-                hour: "16:15",
+                message: "",
+                hour: "",
             }
         ],
     },
     methods:{
         addMessage(){
-            if (this.newMessage != ""){
-                this.messageUser.push(this.newMessage);
-                this.newMessage = "";
+            if (this.newMessage.message != ""){
+                this.textMessage.push({...this.newMessage});
+                this.textMessage
+                this.newMessage.message = "";
             }
         }
         

@@ -1,6 +1,7 @@
 const app = new Vue({
     el: "#root",
     data: {
+        newMessage: "",
         contacts: [
             {
                 name: "Michele",
@@ -60,4 +61,13 @@ const app = new Vue({
             },
         ],
     },
+    methods:{
+        addMessage(){
+            if (this.newMessage != ""){
+                this.contacts.unshift(this.newMessage);
+                this.newMessage = "";
+            }
+        }
+        
+    }
 })

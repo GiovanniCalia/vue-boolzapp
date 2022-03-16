@@ -54,76 +54,6 @@
                         </div>
                         <div class="time">12:00</div>
                     </div>
-                    <!--<div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_2.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Fabio</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>
-                    <div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_3.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Samuele</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>
-                    <div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_4.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Alessandro B.</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>
-                    <div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_5.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Alessandro L.</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>
-                    <div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_6.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Claudia</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>
-                    <div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_7.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Federico</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>
-                    <div class="user">
-                        <div class="user-text-left">
-                            <img src="img/avatar_8.jpg" alt="avatar 1">
-                            <div class="text-users">
-                                <div>Davide</div>
-                                <div>Ultimo messaggio inviato</div>
-                            </div>
-                        </div>
-                        <div class="time">12:00</div>
-                    </div>-->
                 </div>
             </div>
             <div class="second-box">
@@ -163,7 +93,7 @@
                 </div>
                 <div class="message-text ">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" id="write-message"placeholder="Scrivi un messaggio">
+                    <input type="text" id="write-message" v-model="newMessage" @keydown.enter="addMessage" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </div> 
             </div>

@@ -60,11 +60,27 @@ const app = new Vue({
                 altImage: "avatar 8",
             },
         ],
+        messageUser: [
+            {
+                message: "Hai portato a spasso il cane?",
+                hour: "15.30",
+            },
+            {
+                message: "Ricordati di stendere i panni",
+                hour: "15:50",
+            },
+        ],
+        messageFriend: [
+            {
+                message: "Tutto fatto!",
+                hour: "16:15",
+            }
+        ],
     },
     methods:{
         addMessage(){
             if (this.newMessage != ""){
-                this.contacts.unshift(this.newMessage);
+                this.messageUser.push(this.newMessage);
                 this.newMessage = "";
             }
         }

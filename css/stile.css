@@ -21,8 +21,10 @@ body{
 }
 
 #container{
-    width: 1000px;
-    height: 650px;
+    width: 70%;
+    min-width: 900px;
+    height: 90%;
+   /* height: 650px;*/
     display: flex;
     background-color: white;
     position: absolute;
@@ -133,7 +135,8 @@ body{
 }
 
 .users-list{
-    max-height: 485px;
+   /* max-height: 485px;*/
+    max-height: 74%;
     overflow-y: scroll;
 }
 

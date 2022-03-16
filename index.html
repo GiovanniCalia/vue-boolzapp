@@ -16,157 +16,160 @@
     <title>Boolzapp</title>
 </head>
 <body>
-    <div class="green"></div>
-    <div id="container">
-        <div class="first-box">
-            <div class="user-friend">
-                <div class="user-friend-name-img">
-                    <img src="img/avatar_io.jpg" alt="user Sofia">
-                    <div>Sofia</div>
+    <div id="root">
+        <div class="green"></div>
+        <div id="container">
+            <div class="first-box">
+                <div class="user-friend">
+                    <div class="user-friend-name-img">
+                        <img src="img/avatar_io.jpg" alt="user Sofia">
+                        <div>Sofia</div>
+                    </div>
+                    <div class="settings-first-box">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
-                <div class="settings-first-box">
-                    <i class="fa-solid fa-circle-notch"></i>
-                    <i class="fa-solid fa-message"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+    
+                <div class="notification">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="text-notification">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <div>Attiva notifiche desktop</div>
+                    </div>
+                </div>
+                <div class="search-place">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="">
+                </div>
+                <div class="users-list">
+                    <div class="user" v-for="element in contacts">
+                        <div class="user-text-left">
+                            <img src="img/avatar_1.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>{{ element.name }}</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_2.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Fabio</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_3.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Samuele</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_4.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Alessandro B.</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_5.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Alessandro L.</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_6.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Claudia</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_7.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Federico</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
+                    <div class="user">
+                        <div class="user-text-left">
+                            <img src="img/avatar_8.jpg" alt="avatar 1">
+                            <div class="text-users">
+                                <div>Davide</div>
+                                <div>Ultimo messaggio inviato</div>
+                            </div>
+                        </div>
+                        <div class="time">12:00</div>
+                    </div>
                 </div>
             </div>
-
-            <div class="notification">
-                <i class="fa-solid fa-bell-slash"></i>
-                <div class="text-notification">
-                    <div>Ricevi notifiche di nuovi messaggi</div>
-                    <div>Attiva notifiche desktop</div>
-                </div>
-            </div>
-            <div class="search-place">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="">
-            </div>
-            <div class="users-list">
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_1.jpg" alt="avatar 1">
+            <div class="second-box">
+                <div class="user-friend">
+                    <div class="user-friend-name-img">
+                        <img src="img/avatar_1.jpg" alt="user Sofia">
                         <div class="text-users">
                             <div>Michele</div>
-                            <div>Ultimo messaggio inviato</div>
+                            <div>Ultimo accesso oggi alle 12:00</div>
                         </div>
                     </div>
-                    <div class="time">12:00</div>
+                    <div class="settings-first-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_2.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Fabio</div>
-                            <div>Ultimo messaggio inviato</div>
+                <div class="messages">
+                    <div class="message-user">
+                        <div class="single-text me">
+                            <div>Hai portato a spasso il cane?</div>
+                            <div>15:30</div>
                         </div>
                     </div>
-                    <div class="time">12:00</div>
-                </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_3.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Samuele</div>
-                            <div>Ultimo messaggio inviato</div>
+                    <div class="message-user">
+                        <div class="single-text me">
+                            <div>Ricordati di stendere i panni</i></div>
+                            <div>15:50</div>
                         </div>
                     </div>
-                    <div class="time">12:00</div>
-                </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_4.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Alessandro B.</div>
-                            <div>Ultimo messaggio inviato</div>
-                        </div>
+                    <div class="message-friend">
+                        <div class="single-text friend">
+                            <div>Tutto fatto!</div>
+                            <div>16:15</div>
+                         </div>
                     </div>
-                    <div class="time">12:00</div>
                 </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_5.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Alessandro L.</div>
-                            <div>Ultimo messaggio inviato</div>
-                        </div>
-                    </div>
-                    <div class="time">12:00</div>
-                </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_6.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Claudia</div>
-                            <div>Ultimo messaggio inviato</div>
-                        </div>
-                    </div>
-                    <div class="time">12:00</div>
-                </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_7.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Federico</div>
-                            <div>Ultimo messaggio inviato</div>
-                        </div>
-                    </div>
-                    <div class="time">12:00</div>
-                </div>
-                <div class="user">
-                    <div class="user-text-left">
-                        <img src="img/avatar_8.jpg" alt="avatar 1">
-                        <div class="text-users">
-                            <div>Davide</div>
-                            <div>Ultimo messaggio inviato</div>
-                        </div>
-                    </div>
-                    <div class="time">12:00</div>
-                </div>
+                <div class="message-text ">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" id="write-message"placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div> 
             </div>
-        </div>
-        <div class="second-box">
-            <div class="user-friend">
-                <div class="user-friend-name-img">
-                    <img src="img/avatar_1.jpg" alt="user Sofia">
-                    <div class="text-users">
-                        <div>Michele</div>
-                        <div>Ultimo accesso oggi alle 12:00</div>
-                    </div>
-                </div>
-                <div class="settings-first-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-paperclip"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-            </div>
-            <div class="messages">
-                <div class="message-user">
-                    <div class="single-text me">
-                        <div>Hai portato a spasso il cane?</div>
-                        <div>15:30</div>
-                    </div>
-                </div>
-                <div class="message-user">
-                    <div class="single-text me">
-                        <div>Ricordati di stendere i panni</i></div>
-                        <div>15:50</div>
-                    </div>
-                </div>
-                <div class="message-friend">
-                    <div class="single-text friend">
-                        <div>Tutto fatto!</div>
-                        <div>16:15</div>
-                     </div>
-                </div>
-            </div>
-            <div class="message-text ">
-                <i class="fa-regular fa-face-smile"></i>
-                <input type="text" id="write-message"placeholder="Scrivi un messaggio">
-                <i class="fa-solid fa-microphone"></i>
-            </div> 
         </div>
     </div>
+    
 
     <!-- JAVASCRIPT -->
 	

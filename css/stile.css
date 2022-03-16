@@ -5,7 +5,7 @@
 }
 
 html{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body{
@@ -160,9 +160,11 @@ body{
     display: flex;
 }
 
+/*
 .text-users div:first-child{
     font-size: 90%;
 }
+*/
 
 .text-users div:last-child{
     font-size: 70%;
@@ -182,25 +184,27 @@ body{
     position: relative;
 }
 
-.texts{
+.messages{
     height: calc(100% - 3.5rem - 57.59px);
     padding-top: 3rem;
-    overflow-y: scroll;
-    display: flex;
+    padding-left: 3rem;
+    padding-right: 3rem;
     justify-content: space-between;
 }
 
-.area-text{
-    width: 35%;
-    margin-left: 3rem;
-    margin-right: 3rem;
+.message-friend{
+display: flex;
+flex-direction: column;
 }
 
-.left{
-  margin-top: calc(40.09px *2 + 20px);
+.message-user{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .single-text{
+    width: 230px;
     background-color: white;
     padding: 0.8rem;
     margin-bottom: 10px;
@@ -218,11 +222,7 @@ body{
 }
 
 .me{
-    background-color: lightgreen;
-}
-
-.me i{
-    color: red;
+    background-color: rgb(213, 249, 186);
 }
 
 .message-text{

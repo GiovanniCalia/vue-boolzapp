@@ -24,7 +24,7 @@ body{
     width: 70%;
     min-width: 900px;
     height: 90%;
-   /* height: 650px;*/
+    /*height: 650px;*/
     display: flex;
     background-color: white;
     position: absolute;
@@ -135,7 +135,7 @@ body{
 }
 
 .users-list{
-   /* max-height: 485px;*/
+    /*max-height: 485px;*/
     max-height: 74%;
     overflow-y: scroll;
 }
@@ -193,11 +193,12 @@ body{
     padding-left: 3rem;
     padding-right: 3rem;
     justify-content: space-between;
+    overflow-y: scroll;
 }
 
 .message-friend{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .message-user{

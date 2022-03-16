@@ -1,5 +1,5 @@
 const app = new Vue({
-    el: "#container",
+    el: "#root",
     data: {
         contacts: [
             {
@@ -50,6 +50,7 @@ const app = new Vue({
                 hour: "12:00",
                 image: "img/avatar_8.jpg",
             },
-        ],
+
+        ]
     }
 })

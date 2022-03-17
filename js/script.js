@@ -7,7 +7,6 @@ const app = new Vue({
             text: "",
             date: luxon.DateTime.now().toFormat("HH:mm"),
             sent: true,
-
         },
 
         contacts: [
@@ -17,7 +16,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_1.jpg",
                 altImage: "avatar 1",
-
+                indexMessage: "",
                 messages: [
 
                     {
@@ -45,6 +44,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_2.jpg",
                 altImage: "avatar 2",
+                indexMessage: "",
 
                 messages: [
 
@@ -68,6 +68,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_3.jpg",
                 altImage: "avatar 3",
+                indexMessage: "",
 
                 messages: [
 
@@ -96,6 +97,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_4.jpg",
                 altImage: "avatar 4",
+                indexMessage: "",
 
                 messages: [
 
@@ -118,6 +120,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_5.jpg",
                 altImage: "avatar 5",
+                indexMessage: "",
 
                 messages: [
 
@@ -146,6 +149,8 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_6.jpg",
                 altImage: "avatar 6",
+                indexMessage: "",
+
 
                 messages: [
 
@@ -174,6 +179,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_7.jpg",
                 altImage: "avatar 7",
+                indexMessage: "",
 
                 messages: [
 
@@ -197,6 +203,7 @@ const app = new Vue({
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_8.jpg",
                 altImage: "avatar 8",
+                indexMessage: "",
 
                 messages: [
 
@@ -220,11 +227,6 @@ const app = new Vue({
                 ],
             },
         ],
-
-        textMessage: {
-            text: "",
-            hour: "",
-        },
     },
     methods:{
         profile(avatar){
@@ -234,12 +236,30 @@ const app = new Vue({
             this.chatIndex = i;
         },
         addMessage(){
-            const otherMessage = {...this.newMessage}
             const singleMessage = this.contacts[this.chatIndex].messages;
+            /*
+            const newMessage = {
+                text: singleMessage.indexMessage,
+                date: luxon.DateTime.now().toFormat("HH:mm"),
+                sent: true,
+            }*/
+           const otherMessage = {...this.newMessage};
             if (this.newMessage.text != ""){
             singleMessage.push(otherMessage);
             this.newMessage.text = "";
             }
-        }
+            this.friendAnswer(this.chatIndex)
+        },
+        friendAnswer(index){
+            setTimeout(() => {
+                const singleMessage = this.contacts[this.chatIndex].messages;
+                const newMessage = {
+                    text: "ok",
+                    date: luxon.DateTime.now().toFormat("HH:mm"),
+                    sent: false,
+                };
+                singleMessage.push(newMessage);
+            }, 1000) 
+        },
     },
 })

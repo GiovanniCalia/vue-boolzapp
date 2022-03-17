@@ -2,6 +2,7 @@ const app = new Vue({
     el: "#root",
     data: {
         chatIndex: 0,
+
         newMessage: {
             message: "",
             date: "",
@@ -39,7 +40,7 @@ const app = new Vue({
             {
                 name: "Fabio",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("hh/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_2.jpg",
                 altImage: "avatar 2",
 
@@ -62,7 +63,7 @@ const app = new Vue({
             {
                 name: "Samuele",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("HH/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_3.jpg",
                 altImage: "avatar 3",
 
@@ -90,7 +91,7 @@ const app = new Vue({
             {
                 name: "Alessandro B.",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("hh/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_4.jpg",
                 altImage: "avatar 4",
 
@@ -112,7 +113,7 @@ const app = new Vue({
             {
                 name: "Alessandro L.",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("hh/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_5.jpg",
                 altImage: "avatar 5",
 
@@ -140,7 +141,7 @@ const app = new Vue({
             {
                 name: "Claudia",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("hh/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_6.jpg",
                 altImage: "avatar 6",
 
@@ -162,7 +163,7 @@ const app = new Vue({
             {
                 name: "Federico",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("hh/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_7.jpg",
                 altImage: "avatar 7",
 
@@ -185,7 +186,7 @@ const app = new Vue({
             {
                 name: "Davide",
                 lastMessage: "Ultimo messaggio inviato",
-                hour: luxon.DateTime.now().toFormat("hh/mm"),
+                data: luxon.DateTime.now().toFormat("HH/mm"),
                 image: "img/avatar_8.jpg",
                 altImage: "avatar 8",
 
@@ -211,22 +212,16 @@ const app = new Vue({
                 ],
             },
         ],
-        textMessage: {
-                message: "",
-                hour: "",
-            },
-        messageFriend: {
-                message: "",
-                hour: "",
-            }
 
+        textMessage: {
+            message: "",
+            hour: "",
+        },
     },
     methods:{
         addMessage(){
             if (this.newMessage.message != ""){
-                let getTime = luxon.DateTime.now().toLocaleString();
-                console.log(getTime)
-                this.textMessage.push({...this.newMessage});
+                this.textMessage.push(this.newMessage);
                 this.newMessage.message = "";
             }
         }, 

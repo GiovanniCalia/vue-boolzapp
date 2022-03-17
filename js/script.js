@@ -12,26 +12,26 @@ const app = new Vue({
             {
                 name: "Michele",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_1.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_1.jpg",
                 altImage: "avatar 1",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("HH/mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Hai portato a spasso il cane?",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("HH/mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ricordati di stendere i panni",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("HH/mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Tutto fatto!",
                         sent: false,
                     }
@@ -40,21 +40,21 @@ const app = new Vue({
             {
                 name: "Fabio",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_2.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_2.jpg",
                 altImage: "avatar 2",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Hai fatto la spesa?",
                         sent: true,
                     },
 
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Certamente",
                         sent: false,
                     }
@@ -63,26 +63,26 @@ const app = new Vue({
             {
                 name: "Samuele",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_3.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_3.jpg",
                 altImage: "avatar 3",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ciao!",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Come stai?",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ciao! Tutto bene, te?",
                         sent: false,
                     }
@@ -91,20 +91,20 @@ const app = new Vue({
             {
                 name: "Alessandro B.",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_4.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_4.jpg",
                 altImage: "avatar 4",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Mi porti per piacere una pizza!",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Certamente!",
                         sent: false,
                     }
@@ -113,26 +113,26 @@ const app = new Vue({
             {
                 name: "Alessandro L.",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_5.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_5.jpg",
                 altImage: "avatar 5",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Che giornataccia oggi!",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Non mi riesce l'esercizio",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Uffa!",
                         sent: false,
                     }
@@ -141,20 +141,20 @@ const app = new Vue({
             {
                 name: "Claudia",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_6.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_6.jpg",
                 altImage: "avatar 6",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ho chiamato i miei genitori",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ottimo, stanno bene?",
                         sent: false,
                     }
@@ -163,21 +163,21 @@ const app = new Vue({
             {
                 name: "Federico",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_7.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_7.jpg",
                 altImage: "avatar 7",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ehilà!",
                         sent: true,
                     },
 
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ehi!",
                         sent: false,
                     }
@@ -186,26 +186,26 @@ const app = new Vue({
             {
                 name: "Davide",
                 lastMessage: "Ultimo messaggio inviato",
-                data: luxon.DateTime.now().toFormat("HH/mm"),
-                image: "img/avatar_8.jpg",
+                data: luxon.DateTime.now().toFormat("HH:mm"),
+                image: "avatar_8.jpg",
                 altImage: "avatar 8",
 
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ciao",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Ti disturbo?",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh/mm"),
+                        date: luxon.DateTime.now().toFormat("hh:mm"),
                         text: "Nono figurati!",
                         sent: false,
                     }
@@ -219,6 +219,12 @@ const app = new Vue({
         },
     },
     methods:{
+        profile(avatar){
+            return `img/` + avatar;
+        },
+        activeChat(i){
+            this.chatIndex = i;
+        },
         addMessage(){
             if (this.newMessage.message != ""){
                 this.textMessage.push(this.newMessage);

@@ -44,9 +44,9 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="users-list">
-                    <div class="user" v-for="(element, index) in contacts" :class="{active: index == chatIndex}">
+                    <div class="user" v-for="(element, index) in contacts" :class="{active: index == chatIndex}" @click="activeChat(index)">
                         <div class="user-text-left">
-                            <img :src="element.image" :alt="element.altImage">
+                            <img :src="profile(element.image)" :alt="element.altImage">
                             <div class="text-users">
                                 <div>{{ element.name }}</div>
                                 <div>{{ element.lastMessage }}</div>
@@ -59,10 +59,10 @@
             <div class="second-box">
                 <div class="user-friend">
                     <div class="user-friend-name-img">
-                        <img src="img/avatar_1.jpg" alt="user Sofia">
+                        <img :src="profile(contacts[chatIndex].image)" alt="user Sofia">
                         <div class="text-users">
-                            <div>Michele</div>
-                            <div>Ultimo accesso oggi alle 12:00</div>
+                            <div>{{contacts[chatIndex].name}}</div>
+                            <div>Ultimo accersso oggi alle {{contacts[chatIndex].data}}</div>
                         </div>
                     </div>
                     <div class="settings-first-box">

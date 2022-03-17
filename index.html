@@ -62,7 +62,7 @@
                         <img :src="profile(contacts[chatIndex].image)" alt="user Sofia">
                         <div class="text-users">
                             <div>{{contacts[chatIndex].name}}</div>
-                            <div>Ultimo accersso oggi alle {{contacts[chatIndex].data}}</div>
+                            <div>Ultimo accesso oggi alle {{contacts[chatIndex].data}}</div>
                         </div>
                     </div>
                     <div class="settings-first-box">
@@ -75,18 +75,18 @@
                 <div class="messages">
 
 
-                    <div class="single-text" v-for="element in contacts[chatIndex].messages" class="contacts[chatIndex].messages.sent == true ? `single-text-user` : `single-text-friend`" >
+                    <!--<div class="single-text" v-for="element in contacts[chatIndex].messages" class="contacts[chatIndex].messages.sent == true ? `message-user` : `message-friend`" >
                         <div>{{element.text}}</div>
                         <div>{{element.date}}</div>
-                    </div>
+                    </div>-->
 
-                    <!--<div class="message-user">
-                        <div class="single-text me" >
-                            <div>Hai portato a spasso il cane??</div>
-                            <div>15:30</div>
+                    <div v-for="element in contacts[chatIndex].messages" :class="element.sent ? `message-user` : `message-friend`">
+                        <div class="single-text" :class="element.sent ? `me` : `friend`" >
+                            <div>{{element.text}}</div>
+                            <div>{{element.date}}</div>
                         </div>
                     </div>
-                    <div class="message-user">
+                    <!--<div class="message-user">
                         <div class="single-text me">
                             <div>Ricordati di stendere i panni</i></div>
                             <div>15:50</div>

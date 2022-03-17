@@ -5,7 +5,7 @@ const app = new Vue({
 
         newMessage: {
             message: "",
-            date: "",
+            date: luxon.DateTime.now().toFormat("HH:mm"),
         },
 
         contacts: [

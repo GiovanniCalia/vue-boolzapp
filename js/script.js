@@ -4,8 +4,10 @@ const app = new Vue({
         chatIndex: 0,
 
         newMessage: {
-            message: "",
+            text: "",
             date: luxon.DateTime.now().toFormat("HH:mm"),
+            sent: true,
+
         },
 
         contacts: [
@@ -47,14 +49,14 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Hai fatto la spesa?",
                         sent: true,
                     },
 
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Certamente",
                         sent: false,
                     }
@@ -70,19 +72,19 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ciao!",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Come stai?",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ciao! Tutto bene, te?",
                         sent: false,
                     }
@@ -98,13 +100,13 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Mi porti per piacere una pizza!",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Certamente!",
                         sent: false,
                     }
@@ -120,19 +122,19 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Che giornataccia oggi!",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Non mi riesce l'esercizio",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Uffa!",
                         sent: false,
                     }
@@ -148,16 +150,22 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ho chiamato i miei genitori",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ottimo, stanno bene?",
                         sent: false,
-                    }
+                    },
+
+                    {
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
+                        text: "Si si dai stanno benone!",
+                        sent: true,
+                    },
                 ],
             },
             {
@@ -170,14 +178,14 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ehilà!",
                         sent: true,
                     },
 
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ehi!",
                         sent: false,
                     }
@@ -193,19 +201,19 @@ const app = new Vue({
                 messages: [
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ciao",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Ti disturbo?",
                         sent: true,
                     },
 
                     {
-                        date: luxon.DateTime.now().toFormat("hh:mm"),
+                        date: luxon.DateTime.now().toFormat("HH:mm"),
                         text: "Nono figurati!",
                         sent: false,
                     }
@@ -214,7 +222,7 @@ const app = new Vue({
         ],
 
         textMessage: {
-            message: "",
+            text: "",
             hour: "",
         },
     },
@@ -226,10 +234,12 @@ const app = new Vue({
             this.chatIndex = i;
         },
         addMessage(){
-            if (this.newMessage.message != ""){
-                this.textMessage.push(this.newMessage);
-                this.newMessage.message = "";
+            const otherMessage = {...this.newMessage}
+            const singleMessage = this.contacts[this.chatIndex].messages;
+            if (this.newMessage.text != ""){
+            singleMessage.push(otherMessage);
+            this.newMessage.text = "";
             }
-        }, 
+        }
     },
 })

@@ -73,13 +73,6 @@
                 </div>
 
                 <div class="messages">
-
-
-                    <!--<div class="single-text" v-for="element in contacts[chatIndex].messages" class="contacts[chatIndex].messages.sent == true ? `message-user` : `message-friend`" >
-                        <div>{{element.text}}</div>
-                        <div>{{element.date}}</div>
-                    </div>-->
-
                     <div v-for="element in contacts[chatIndex].messages" :class="element.sent ? `message-user` : `message-friend`">
                         <div class="single-text" :class="element.sent ? `me` : `friend`" >
                             <div>{{element.text}}</div>
@@ -98,18 +91,10 @@
                             <div>16:15</div>
                         </div>
                     </div>-->
-
-
-                   <!--<div class="message-friend" v-for="element in messageFriend">
-                        <div class="single-text friend">
-                            <div>{{ element.message }}</div>
-                            <div>15:50</div>
-                         </div>
-                    </div>-->
                 </div>
                 <div class="message-text ">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" id="write-message" v-model="newMessage.message" @keydown.enter="addMessage" placeholder="Scrivi un messaggio">
+                    <input type="text" id="write-message" v-model="newMessage.text" @keydown.enter="addMessage" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </div> 
             </div>
@@ -125,6 +110,3 @@
 
 </body>
 </html>
-
-
-<!--:class="contacts[chatIndex].messages.sent == true ? `message-user` : `message-friend`"-->

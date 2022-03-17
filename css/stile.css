@@ -188,14 +188,6 @@ body{
     position: relative; 
 }
 
-.me{
-    background-color: rgb(213, 249, 186);
-}
-
-.friend{
-    background-color: white;
-}
-
 .message-user{
     display: flex;
     flex-direction: column;
@@ -205,7 +197,14 @@ body{
 .message-friend{
     display: flex;
     flex-direction: column;
+}
 
+.me{
+    background-color: rgb(213, 249, 186);
+}
+
+.friend{
+    background-color: white;
 }
 
 .single-text{
@@ -215,16 +214,6 @@ body{
     border-radius: 5px;
     font-size: 80%;
     position: relative;
-}
-
-.single-text-friend{
-    width: 230px;
-    padding: 0.8rem;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 80%;
-    position: relative;
-    background-color: white;
 }
 
 .single-text div:last-child{

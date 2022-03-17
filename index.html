@@ -56,7 +56,9 @@
                     </div>
                 </div>
             </div>
+
             <div class="second-box">
+
                 <div class="user-friend">
                     <div class="user-friend-name-img">
                         <img :src="profile(contacts[chatIndex].image)" alt="user Sofia">
@@ -65,6 +67,7 @@
                             <div>Ultimo accesso oggi alle {{contacts[chatIndex].data}}</div>
                         </div>
                     </div>
+
                     <div class="settings-first-box">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
@@ -79,28 +82,16 @@
                             <div>{{element.date}}</div>
                         </div>
                     </div>
-                    <!--<div class="message-user">
-                        <div class="single-text me">
-                            <div>Ricordati di stendere i panni</i></div>
-                            <div>15:50</div>
-                        </div>
-                    </div>
-                    <div class="message-friend" >
-                        <div class="single-text friend">
-                            <div>Tutto fatto!</div>
-                            <div>16:15</div>
-                        </div>
-                    </div>-->
                 </div>
+
                 <div class="message-text ">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" id="write-message" v-model="newMessage.text" @keydown.enter="addMessage" placeholder="Scrivi un messaggio">
+                    <input type="text" id="write-message" v-model="contacts[chatIndex].indexMessage" @keydown.enter="addMessage" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </div> 
             </div>
         </div>
     </div>
-    
 
     <!-- JAVASCRIPT & LUXON -->
 

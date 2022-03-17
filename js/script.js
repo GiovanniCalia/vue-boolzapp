@@ -2,12 +2,12 @@ const app = new Vue({
     el: "#root",
     data: {
         chatIndex: 0,
-
+        /*
         newMessage: {
             text: "",
             date: luxon.DateTime.now().toFormat("HH:mm"),
             sent: true,
-        },
+        },*/
 
         contacts: [
             {
@@ -151,7 +151,6 @@ const app = new Vue({
                 altImage: "avatar 6",
                 indexMessage: "",
 
-
                 messages: [
 
                     {
@@ -237,22 +236,20 @@ const app = new Vue({
         },
         addMessage(){
             const singleMessage = this.contacts[this.chatIndex].messages;
-            /*
             const newMessage = {
-                text: singleMessage.indexMessage,
+                text: this.contacts[this.chatIndex].indexMessage,
                 date: luxon.DateTime.now().toFormat("HH:mm"),
                 sent: true,
-            }*/
-           const otherMessage = {...this.newMessage};
-            if (this.newMessage.text != ""){
-            singleMessage.push(otherMessage);
-            this.newMessage.text = "";
+            }
+            if (this.contacts[this.chatIndex].indexMessage != ""){
+            singleMessage.push(newMessage);
+            this.contacts[this.chatIndex].indexMessage = "";
             }
             this.friendAnswer(this.chatIndex)
         },
         friendAnswer(index){
             setTimeout(() => {
-                const singleMessage = this.contacts[this.chatIndex].messages;
+                const singleMessage = this.contacts[index].messages;
                 const newMessage = {
                     text: "ok",
                     date: luxon.DateTime.now().toFormat("HH:mm"),

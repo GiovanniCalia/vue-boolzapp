@@ -49,10 +49,10 @@
                             <img :src="profile(element.image)" :alt="element.altImage">
                             <div class="text-users">
                                 <div>{{ element.name }}</div>
-                                <div>{{ element.lastMessage }}</div>
+                                <div>{{ element.messages[element.messages.length -1].text }}</div>
                             </div>
                         </div>
-                        <div class="time">{{ element.data}}</div>
+                        <div class="time">{{ element.messages[element.messages.length -1].date }}</div>
                     </div>
                 </div>
             </div>

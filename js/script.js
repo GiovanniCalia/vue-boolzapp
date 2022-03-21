@@ -5,7 +5,6 @@ const app = new Vue({
         contacts: [
             {
                 name: "Michele",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_1.jpg",
                 altImage: "avatar 1",
@@ -33,7 +32,6 @@ const app = new Vue({
             },
             {
                 name: "Fabio",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_2.jpg",
                 altImage: "avatar 2",
@@ -57,7 +55,6 @@ const app = new Vue({
             },
             {
                 name: "Samuele",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_3.jpg",
                 altImage: "avatar 3",
@@ -86,7 +83,6 @@ const app = new Vue({
             },
             {
                 name: "Alessandro B.",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_4.jpg",
                 altImage: "avatar 4",
@@ -109,7 +105,6 @@ const app = new Vue({
             },
             {
                 name: "Alessandro L.",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_5.jpg",
                 altImage: "avatar 5",
@@ -138,7 +133,6 @@ const app = new Vue({
             },
             {
                 name: "Claudia",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_6.jpg",
                 altImage: "avatar 6",
@@ -167,7 +161,6 @@ const app = new Vue({
             },
             {
                 name: "Federico",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_7.jpg",
                 altImage: "avatar 7",
@@ -191,7 +184,6 @@ const app = new Vue({
             },
             {
                 name: "Davide",
-                lastMessage: "Ultimo messaggio inviato",
                 data: luxon.DateTime.now().toFormat("HH:mm"),
                 image: "avatar_8.jpg",
                 altImage: "avatar 8",
